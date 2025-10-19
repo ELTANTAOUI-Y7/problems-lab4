@@ -4,21 +4,21 @@ public class Test {
     public static void main(String[] args) {
 
         //a.Create majors
-        Major cs=new Major("11", "Computer Science");
-        Major math=new Major("22", "Statistics");
+        Major cs=new Major("23", "Computer Science");
+        Major math=new Major("45", "Mathematics");
 
         //b.Create some students associated with these majors
-        Student s1=new Student("Youssef", "Bennani", "0611223344", "youssef.bennani@gmail.com", "99110011", cs);
-        Student s2=new Student("Sara", "El Amrani", "0677889900", "sara.elamrani@gmail.com", "99110022", cs);
-        Student s3=new Student("Hajar", "Oukili", "0699887766", "hajar.oukili@gmail.com", "99220033", math);
+        Student s1=new Student("Amal", "Safi", "0612345678", "amal.safi@gmail.com", "22885676", cs);
+        Student s2=new Student("Samir", "Alami", "0622334455", "samir.alami@gmail.com", "23585976", cs);
+        Student s3=new Student("Yahya", "EL-TANTAOUI", "0633445566", "Yahya.EL-TANTAOUI@gmail.com", "23566787", math);
 
         //c.Display Computer Science students
         System.out.println("The list of students in the computer science major is:");
         System.out.println(cs.getStudentListAsString());
 
         //6.Test findStudentByCNE
-        System.out.println("\nSearching for student with CNE 99110022...");
-        Student found=cs.findStudentByCNE("99110022");
+        System.out.println("\nSearching for student with CNE 23585976...");
+        Student found=cs.findStudentByCNE("23585976");
         if (found != null) {
             System.out.println("Student found: " + found.getFullNameFormatted());
         } else {
@@ -29,8 +29,8 @@ public class Test {
         System.out.println("\nCurrent number of students in CS: " + cs.getStudentCount());
 
         //8.Test removeStudent
-        System.out.println("\nRemoving student with CNE 99110011");
-        boolean removed=cs.removeStudent("99110011");
+        System.out.println("\nRemoving student with CNE 22885");
+        boolean removed=cs.removeStudent("22885676");
         System.out.println("Removed: " + removed);
 
         System.out.println("\nUpdated list of Computer Science students:");
@@ -44,13 +44,13 @@ public class Test {
         System.out.println(s2.getFullNameFormatted());
 
         //Test Instructor
-        Instructor instr1=new Instructor("INS-202");
-        instr1.setFirstName(null);
-        instr1.setSecondName("Latifi");
+        Instructor instr1=new Instructor("INS-101");
+        instr1.setFirstName("Karim");
+        instr1.setSecondName(null);
 
-        Instructor instr2=new Instructor("INS-101");
-        instr2.setFirstName("Karim");
-        instr2.setSecondName(null);
+        Instructor instr2=new Instructor("INS-202");
+        instr2.setFirstName(null);
+        instr2.setSecondName("Latifi");
 
         Instructor instr3=new Instructor("INS-303");
         instr3.setFirstName("Mouna");
@@ -62,9 +62,9 @@ public class Test {
         System.out.println(instr2.displayName());
         System.out.println(instr3.displayName());
         //Test Subject
-        Subject subj1=new Subject(306," SE-306", "introduction to java");
-        Subject subj2=new Subject(500,"DS-500", "Data Structures");
-        Subject subj3=new Subject(402,"AP-402", "Advanced Programming");
+        Subject subj1=new Subject(101," cs-101 ", "introduction to java");
+        Subject subj2=new Subject(675,"DS-675", "Data Structures");
+        Subject subj3=new Subject(107,"APG-107", "Advanced Programming");
 
         System.out.println("\n Subject normalizedCode()");
         System.out.println(subj1.normalizedCode());
