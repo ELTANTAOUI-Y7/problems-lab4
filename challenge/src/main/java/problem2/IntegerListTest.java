@@ -82,7 +82,7 @@ public class IntegerListTest
         System.out.println("\n Menu ");
         System.out.println(" ====");
         System.out.println("0: Quit");
-        System.out.println("1: Create a new list (** do this first!! **)");
+        System.out.println("1: Create a new list");
         System.out.println("2: Print the list");
         System.out.println("3: Add an element to  the list");
         System.out.println("4: Remove the first occurrence  of a value from the list");
