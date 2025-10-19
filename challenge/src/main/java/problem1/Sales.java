@@ -14,8 +14,8 @@ public class Sales {
         int sum = 0;
 
         // Initialize min and max
-        int maxSale = 0;
-        int minSale = 0;
+        int maxSale = Integer.MIN_VALUE;
+        int minSale = Integer.MAX_VALUE;
         int maxIndex = 0;
         int minIndex = 0;
 
